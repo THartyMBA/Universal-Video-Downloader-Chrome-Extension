@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Universal Video Downloader",
+  "version": "1.0",
+  "description": "Detect and download videos (including streams) from any webpage.",
+  "permissions": [
+    "downloads",
+    "storage",
+    "activeTab",
+    "webRequest",
+    "nativeMessaging"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Download Video"
+  }
+}

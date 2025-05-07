@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Download Video</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            min-width: 250px;
+            padding: 10px;
+        }
+
+        h2 {
+            font-size: 1.1em;
+            margin-bottom: 0.5em;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 0.5em;
+        }
+
+        button {
+            width: 100%;
+            padding: 6px;
+            cursor: pointer;
+        }
+
+        .note {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Videos on this page:</h2>
+    <ul id="videoList"></ul>
+    <div id="noVideosMsg" class="note" style="display: none;">
+        No videos detected on this site.
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>
